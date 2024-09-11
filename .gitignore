@@ -2,3 +2,11 @@ dataset/
 myenv/
 .ipynb_checkpoints
 __pycache__/
+.terraform
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+.env
+media/
+uploads/
+.dockerignore
