@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Muffin vs Chihuahua Classifier</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>About the Muffin vs Chihuahua Classifier</h1>
+
+        <p>
+            Welcome to the Muffin vs Chihuahua Image Classifier! This web app uses a machine learning model that was trained from scratch to classify images into two categories: Chihuahua or Muffin. The project integrates several cutting-edge technologies to ensure robust performance and easy deployment.
+        </p>
+
+        <h2>Technologies Used:</h2>
+        <ul>
+            <li><strong>Docker:</strong> Docker is used to containerize the application, ensuring consistent behavior across development, staging, and production environments.</li>
+            <li><strong>Terraform:</strong> Terraform is used to manage the infrastructure as code, automating the deployment of the app to Azure with scalability and reliability.</li>
+            <li><strong>Django:</strong> The backend of the application is powered by Django, a robust web framework that handles routing, image uploads, and prediction requests.</li>
+            <li><strong>TensorFlow:</strong> The machine learning model is built using TensorFlow, trained from scratch to distinguish between images of Chihuahuas and muffins.</li>
+            <li><strong>Azure:</strong> The app is deployed on Azure using Azure App Service and Azure Container Registry, offering a scalable and reliable platform for hosting the classifier.</li>
+        </ul>
+
+        <h2>How It Works:</h2>
+        <p>
+            Users upload an image, and the trained TensorFlow model predicts whether the image contains a Chihuahua or a muffin. The result is then displayed along with the uploaded image for comparison.
+        </p>
+
+        <div class="try-now">
+            <a href="{% url 'upload_image' %}" class="button">Try Now</a>
+        </div>
+    </div>
+</body>
+</html>

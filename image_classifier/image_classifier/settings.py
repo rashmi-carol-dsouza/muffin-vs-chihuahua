@@ -16,8 +16,9 @@ DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 # Allow hosts from .env file
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
+CSRF_TRUSTED_ORIGINS = ['https://muffinvschihuahua.azurewebsites.net']
 
-# Application definition remains unchanged
+# Application definition 
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -29,7 +30,7 @@ INSTALLED_APPS = [
     'classifier',
 ]
 
-# Middleware remains unchanged
+# Middleware 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -60,7 +61,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'image_classifier.wsgi.application'
 
-# Database remains unchanged
+# Database 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -68,7 +69,7 @@ DATABASES = {
     }
 }
 
-# Password validation remains unchanged
+# Password validation 
 
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
@@ -77,13 +78,13 @@ AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
 ]
 
-# Internationalization remains unchanged
+# Internationalization 
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-# Static files remain unchanged
+# Static files 
 STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
