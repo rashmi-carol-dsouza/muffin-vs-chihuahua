@@ -3,14 +3,14 @@ from django.core.files.storage import default_storage
 from .forms import ImageUploadForm
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
-from django.conf import settings  # Import settings to use MEDIA_ROOT
+from django.conf import settings  
 import numpy as np
 import os
 from django.http import HttpResponse
 
 def home(request):
     return render(request, 'classifier/home.html')
-    
+
 # Load your pre-trained TensorFlow model
 model_path = os.path.join(os.path.dirname(__file__), 'my_model.h5')
 model = load_model(model_path)
